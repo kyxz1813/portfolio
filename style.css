@@ -43,7 +43,11 @@ body {
     /* margin-inline: 500px; */
     text-decoration: none;
     text-align: center;
+    display: block;
+    width: 100%;
     max-width: 150ch;
+    box-sizing: border-box;
+    
   }
   html{
     accent-color: var(--color-accent);
