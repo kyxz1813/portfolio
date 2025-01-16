@@ -4,10 +4,10 @@
 nav{
   display: flex;
   color: inherit;
-  padding: 1em;
+  padding: 0.5em;
   text-align: center;
   text-decoration: none;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: oklch(80% 3% 200);
@@ -19,12 +19,15 @@ ul {
 li{
   display: contents;
 }
-li.current{
+/* li.current{
   padding-bottom: 0.4em;
-}
+} */
 a{
   flex: 1;
   text-decoration: none;
+}
+a.current{
+  padding-bottom: 0.4em;
 }
 a:hover {
   font-size: 18px;
