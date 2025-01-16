@@ -1,15 +1,47 @@
+:root {
+  --color-accent: rgb(230, 230, 250);
+}
+nav{
+  display: flex;
+  color: inherit;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 25px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: oklch(80% 3% 200);
+}
+ul {
+  padding: 100px;
+  display: contents;
+}
+li{
+  display: contents;
+}
+li.current{
+  padding-bottom: 0.4em;
+}
+a{
+  flex: 1;
+  text-decoration: none;
+}
+a:hover {
+  font-size: 18px;
+  /* color: var(--color-accent); */
+  background-color: oklch(from var(--color-accent) 95% 5% h)
+}
 body {
     /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
-    width: 1000px;
     padding: 100px;
-    margin-inline: max(1em, (100% - 100ch) / 2);
-    display: contents;
+    /* margin-inline: 500px; */
     text-decoration: none;
+    text-align: center;
+    max-width: 150ch;
   }
-  /* nav {
-    padding: 100px;
-    display: contents;
-  } */
+  html{
+    accent-color: var(--color-accent);
+  }
