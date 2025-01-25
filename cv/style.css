@@ -1,5 +1,6 @@
 :root {
   --color-accent: rgb(230, 230, 250);
+  color-scheme: light dark;
 }
 html{
   accent-color: var(--color-accent);
@@ -27,6 +28,8 @@ nav{
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: oklch(80% 3% 200);
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom-color: var(--border-color);
 }
 nav ul {
   padding: 100px;
@@ -40,9 +43,10 @@ nav a{
   text-decoration: none;
 }
 nav a.current{
-  border-bottom-width: 1px;
-  border-bottom: 0.4em solid oklch(80% 3% 200);
-  padding-bottom: 0.4rem;
+  font-size: 18px;
+  /* color: var(--color-accent); */
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 nav a:hover {
   font-size: 18px;
@@ -96,4 +100,7 @@ article section p {
 
 article section p time {
   margin-left: auto; /* Push the time element to the far right */
+}
+label.color_scheme{
+  position: absolute;
 }

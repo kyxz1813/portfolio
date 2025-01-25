@@ -1,6 +1,14 @@
 :root {
   --color-accent: rgb(230, 230, 250);
+  color-scheme: light dark;
 }
+/* :root[color-scheme="dark"] {
+  --background-color: dark;
+}
+:root[color-scheme="light"] {
+  --background-color: light;
+} */
+
 html{
   accent-color: var(--color-accent);
 }
@@ -8,6 +16,7 @@ body {
   /* Set line height to 1.5 times the font size
        and use the OS’s UI font as the website font
      */
+  
   font: 100%/1.5 system-ui;
   padding: 0.5em;
   margin-inline: auto;
@@ -17,6 +26,7 @@ body {
   box-sizing: border-box; */
   max-width: 130ch;
 }
+
 nav{
   display: flex;
   color: inherit;
@@ -27,6 +37,9 @@ nav{
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: oklch(80% 3% 200);
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom-color: var(--border-color);
+  
 }
 nav ul {
   padding: 100px;
@@ -47,7 +60,8 @@ nav a.current{
 nav a:hover {
   font-size: 18px;
   /* color: var(--color-accent); */
-  background-color: oklch(from var(--color-accent) 95% 5% h)
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 img{
   padding: 1em;
@@ -133,4 +147,11 @@ article img{
 }
 .projects h2{
   margin: 0
+}
+label.color_scheme{
+  position: absolute;
+  top: 1rem;
+  right:1rem;
+  font-size: 0.8rem;
+  font-family: inherit;
 }
