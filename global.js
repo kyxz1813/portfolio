@@ -83,7 +83,69 @@ select.addEventListener('input', function (event) {
   localStorage.colorScheme = event.target.value
 });
 
-for (let [name, value] of data) {
-  // TODO build URL parameters here
-  console.log(name, value);
+// for (let [name, value] of data) {
+//   // TODO build URL parameters here
+//   console.log(name, value);
+// }
+
+// fetch your project data
+export async function fetchJSON(url) {
+  try {
+      // Fetch the JSON file from the given URL
+      const response = await fetch(url);
+      console.log(response)
+      if (!response.ok) {
+        throw new Error(`Failed to fetch projects: ${response.statusText}`);
+      }
+    // console.log(response)
+    const data = await response.json();
+    return data; 
+  } catch (error) {
+      console.error('Error fetching or parsing JSON data:', error);
+  }
+
+  
 }
+// export function renderProjects(project, containerElement) {
+//   // Your code will go here
+//   containerElement.innerHTML = '';
+//   for (let project of projects) {
+//     const article = document.createElement('article');
+//     article.innerHTML = `
+//     <h3>${project.title}</h3>
+//     <img src="${project.image}" alt="${project.title}">
+//     <p>${project.description}</p>
+//     `;
+//     containerElement.appendChild(article);
+//   }
+// }
+
+// replace the upper renderProjects function with the following
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  // write javascript that will allow dynamic heading levels based on previous function
+  if (typeof containerElement === null) {
+    throw new Error('Invalid container element');
+  }
+
+  let validHeadingLevels = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+  if (!validHeadingLevels.includes(headingLevel)) {
+    headingLevel = 'h2'
+    throw new Error('Invalid heading level');
+  }
+  containerElement.innerHTML = '';
+  for (let project of projects) {
+    const article = document.createElement('article');
+    article.innerHTML = `
+    <${headingLevel}>${project.title}</${headingLevel}>
+    <img src="${project.image}" alt="${project.title}">
+    <p>${project.description}</p>
+    `;
+    containerElement.appendChild(article);
+  }
+}
+
+export async function fetchGitHubData(username) {
+  // return statement here
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+
