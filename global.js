@@ -103,9 +103,8 @@ export async function fetchJSON(url) {
   } catch (error) {
       console.error('Error fetching or parsing JSON data:', error);
   }
-
-  
 }
+
 // export function renderProjects(project, containerElement) {
 //   // Your code will go here
 //   containerElement.innerHTML = '';
@@ -119,7 +118,6 @@ export async function fetchJSON(url) {
 //     containerElement.appendChild(article);
 //   }
 // }
-
 // replace the upper renderProjects function with the following
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
   // write javascript that will allow dynamic heading levels based on previous function
@@ -146,6 +144,8 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
 
 export async function fetchGitHubData(username) {
   // return statement here
+  console.log('fetched username')
   return fetchJSON(`https://api.github.com/users/${username}`);
 }
+
 
