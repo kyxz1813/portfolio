@@ -13,9 +13,24 @@ function countProjects(projects) {
 countProjects(projects)
 
 /* lab 05 */
+// let colors = ["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5","#d9d9d9","#bc80bd","#ccebc5","#ffed6f"];
+
 let query = '';
-let selectedYear = null; // Track selected year
+let selectedYear = null;
 let searchInput = document.querySelector('.searchBar');
+
+// Store original colors for each year
+const colors = {
+  "2021": "#8dd3c7",
+  "2022": "#ffffb3",
+  "2023": "#bebada",
+  "2024": "#fb8072",
+  "2025": "#80b1d3",
+  "2026": "#fdb462",
+  "2027": "#b3de69",
+  "2028": "#fccde5",
+  "2029": "#d9d9d9",
+};
 
 function renderPieChart(projectsGiven) {
   // Recalculate rolled data
@@ -42,13 +57,8 @@ function renderPieChart(projectsGiven) {
   let newLegend = d3.select('.legend');
   newLegend.selectAll('*').remove();
 
-  // Define colors
-  let colors = ["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5","#d9d9d9","#bc80bd","#ccebc5","#ffed6f"];
-
-  // Determine fill color for entire pie chart
-  let pieColor = selectedYear
-    ? colors[newData.findIndex(d => d.label === selectedYear) % colors.length]
-    : null; // Use specific slice color if filtered
+  // Determine correct color for the pie chart
+  let selectedColor = selectedYear ? colors[selectedYear] : null;
 
   // Append new pie slices
   newSVG
@@ -57,7 +67,7 @@ function renderPieChart(projectsGiven) {
     .enter()
     .append('path')
     .attr('d', arcGenerator)
-    .attr('fill', (d, idx) => selectedYear ? pieColor : colors[idx % colors.length]) // ✅ If filtered, show only selected color
+    .attr('fill', (d) => selectedYear ? selectedColor : colors[d.data.label]) // ✅ FIXED: Uses correct slice color
     .on('click', function(event, d) {
       // Toggle selection state
       if (selectedYear === d.data.label) {
@@ -70,10 +80,10 @@ function renderPieChart(projectsGiven) {
     });
 
   // Append new legends
-  newData.forEach((d, idx) => {
+  newData.forEach((d) => {
     newLegend.append('li')
       .attr('class', () => (d.label === selectedYear ? 'selected' : ''))
-      .html(`<span class="swatch" style="background-color: ${colors[idx]};"></span> 
+      .html(`<span class="swatch" style="background-color: ${colors[d.label]};"></span> 
              ${d.label} <em>(${d.value})</em>`);
   });
 }
@@ -89,7 +99,7 @@ function updateFilteredProjects() {
     });
   }
 
-  if (selectedYear !== null) { // Then apply pie slice filter
+  if (selectedYear !== null) { // Apply pie slice filter
     filteredProjects = filteredProjects.filter((project) => project.year === selectedYear);
   }
 
