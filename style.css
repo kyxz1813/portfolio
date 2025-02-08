@@ -178,3 +178,75 @@ label.color_scheme{
   grid-row: 2;
   font-size: 24px;
 }
+
+/* lab 5 */
+#projects-plot{
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+.container {
+  display: flex;
+  padding: 10px; /* Adds spacing inside */
+  height: fit-content;
+  align-items: center; /* Aligns pie chart and legend vertically */
+  justify-content: center; /* Centers both items */
+  margin: auto; 
+}
+
+.legend {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  column-gap: 70px;
+  display: grid;
+  border: 1px solid #ccc; /* Optional: adds a subtle border */
+  height: fit-content;
+  width: 100%; /* Ensures it expands properly */
+  gap: 15px; /* Adds spacing between legend items */
+  list-style: none; /* Removes bullet points */
+  align-items: center; /* Aligns items vertically */
+  flex-wrap: wrap; /* Ensures wrapping when needed */
+  padding: 2em;
+  margin: 2em;
+  text-align: left;
+  /* vertical-align: middle; */
+}
+
+.legend li {
+  display: flex;
+  align-items: center; /* Aligns text with circles */
+  gap: 8px; /* Adds space between circle and text */
+}
+
+.legend .swatch {
+  width: 20px; /* Set the size of color circles */
+  height: 20px;
+  border-radius: 50%; /* Makes them circular */
+  background-color: var(--color); /* Assigns the correct color */
+  display: inline-block;
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
+.searchBar{
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
