@@ -2,10 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <br>
+    <div id="stats"></div>
+    <br>
+
+    <h2>Commits by time of day</h2>
+
+    <dl id="commit-tooltip" class="info tooltip">
+        <dt>Commit</dt>
+        <dd>
+          <a href="" id="commit-link" target="_blank"></a>
+        </dd>
+      
+        <dt>Date</dt>
+        <dd id="commit-date"></dd>
+      
+        <!-- Add: Time, author, lines edited -->
+        <dt>Time</dt>
+        <dd id="time"></dd>
+        
+        <dt>Author</dt>
+        <dd id="author"></dd>
+
+        <dt>Line</dt>
+        <dd id="lines-edited"></dd>
+    </dl>
+
+    <div id="chart"></div>
+
+    <p id="selection-count">No commits selected</p>
+
+    <dl id="language-breakdown" class="stats"></dl>
+
+    <script type="module" src="../global.js"></script>
+    <script src="main.js" type="module"></script>   
 </body>
 </html>
