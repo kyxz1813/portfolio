@@ -82,8 +82,10 @@ img{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%);
+  padding: 16px 32px;
 }
+
 .text {
   text-align: center;
   background-color:  rgb(179, 179, 211);
@@ -138,6 +140,8 @@ article img{
   /* justify-content: center;
   align-items: center; */
   position: relative;
+  max-height: 140px;
+  max-width: 250px;
 
 }
 .projects h1, h2, h3, h4, h5, h6{
@@ -194,6 +198,7 @@ label.color_scheme{
   justify-content: center; /* Centers both items */
   margin: auto; 
 }
+
 
 .legend {
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -349,4 +354,12 @@ dl.stats div {
   display: flex;
   flex-direction: column; /* Stack dt & dd inside each column */
   align-items: center;
+}
+
+p1.intro {
+  text-align:left;
+  min-width: 3em;
+  max-width: 30px;
+  padding: 40px;
+  margin: 40px;
 }
