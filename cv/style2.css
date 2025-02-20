@@ -1,0 +1,189 @@
+:root {
+    --color-accent: rgb(230, 230, 250);
+    color-scheme: light dark;
+}
+html{
+accent-color: var(--color-accent);
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  header {
+    background:rgb(164, 164, 199);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .face {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .profile-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #fff;
+  }
+  
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-info li {
+    margin: 5px 0;
+  }
+  
+  .contact-info a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  /* Section Item Styles */
+  .education-item,
+  .experience-item,
+  .research-item,
+  .activity-item {
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin-bottom: 8px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    main {
+      margin: 10px;
+      padding: 10px;
+    }
+    .profile-image {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+/* Nav */
+
+nav{
+    display: flex;
+    color: inherit;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: oklch(80% 3% 200);
+    --border-color: oklch(50% 10% 200 / 40%);
+    border-bottom-color: var(--border-color);
+}
+nav ul {
+    padding: 100px;
+    display: contents;
+}
+nav li{
+    display: contents;
+}
+nav a{
+    flex: 1;
+    text-decoration: none;
+}
+nav a.current{
+    border-bottom-width: 1px;
+    border-bottom: 0.4em solid oklch(80% 3% 200);
+    padding-bottom: 0.4rem;
+}
+nav a:hover {
+    font-size: 18px;
+    /* color: var(--color-accent); */
+    background-color: oklch(from var(--color-accent) 95% 5% h);
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+.info {
+  display: flex;
+  text-align: center;
+  padding: 3em 0em 2.5em 0em;
+  /* margin-bottom: 30px; */
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #90858f;
+  text-decoration: none;
+}
+.info ul{
+  /* padding: 100px; */
+  flex: 1;
+  /* display: contents; */
+  text-decoration: none;
+}
+.info li{
+  /* display: contents; */
+  text-decoration: none;
+  flex: 1;
+}
+.info a{
+  color: inherit;
+  /* display: contents; */
+  flex: 1;
+  text-decoration: none;
+}
+article section p {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space school and time apart */
+    align-items: center; /* Align items vertically in the center */
+}
+
+article section p time {
+    margin-left: auto; /* Push the time element to the far right */
+}
+
+.color_scheme {
+    position: absolute;
+    top: 1rem;
+    right:1rem;
+    font-size: 0.8rem;
+    font-family: inherit;
+}
+  

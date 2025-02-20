@@ -23,7 +23,7 @@ let pages = [
     { url: 'contact/', title: 'Contact'},
     { url: 'cv/', title: 'CV'},
     {url: 'meta/', title: 'META'},
-    { url: 'https://github.com/kyxz1813', title: 'Profile'}
+    { url: 'https://github.com/kyxz1813', title: 'GitHub'}
   ];
 
 let nav = document.createElement('nav');
