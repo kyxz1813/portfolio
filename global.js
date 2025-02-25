@@ -135,6 +135,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
   }
   containerElement.innerHTML = '';
   for (let project of projects) {
+    console.log("2${project.image}");
     const article = document.createElement('article');
     article.innerHTML = `
     <${headingLevel}>
@@ -144,7 +145,6 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     <p>${project.description}</p>
     <div>Year: ${project.year}</div>
     `;
-    console.log("${project.image}");
     containerElement.appendChild(article);
   }
 }
