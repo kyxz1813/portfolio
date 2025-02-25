@@ -1,75 +1,37 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
+        "title": "Mouse Circadian Rhythm Analysis",
         "year": "2025",
-        "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+        "url": "https://kyxz1813.github.io/Mouse-Circadian-Rhythm-Analysis/",
+        "image": "../images/mouse.png",
+        "description": "An interactive data visualization that deploys a radial graph to explore the circadian rhythms of mice, aiming to answer two key questions: What is the relationship between temperature and activity? How does gender influence this relationship?"
       },
     {
-        "title": "Geospatial visualizations",
+        "title": "Bikewatching",
         "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Nam delectus doloribus sunt sapiente accusantium, optio ex sint magni minima enim quidem, cupiditate quo, esse magnam dolore saepe ut ullam exercitationem quas sit inventore alias. Autem animi distinctio vero?"
+        "image": "../images/bikewatching.png",
+        "url": "https://kyxz1813.github.io/bikewatching/",
+        "description": "An immersive, interactive map visualization of bike traffic in the Boston area during different times of the day."
     },
     {
         "title": "Amazon Product Reviews Dataset Analysis",
         "year": "2024",
+        "url": "https://docs.google.com/document/d/1rIhhnQYCZioL1QtNduhDfBJ-hzKJjzW6NMwtGGLronM/edit?usp=sharing",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "CSE158 final project. "
+        "description": "We used the Amazon Product Reviews (Amazon_Fashion category) 2023 dataset to create a machine learning model to predict product rateings, using features like, review text, helpfulness votes, item descriptions."
     },
     {
-        "title": "Reprehenderit praesentium fugit provident!",
+        "title": "Recipe Nutrition VS. Preparation Time & Steps",
         "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Illo qui laborum libero commodi sequi numquam similique reprehenderit, magnam modi optio? Molestias, quae natus minima deleniti fuga numquam exercitationem velit amet iste laborum accusantium voluptatibus voluptate recusandae voluptas mollitia?"
-    },
-    {
-        "title": "Recusandae magnam nostrum ab.",
-        "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Debitis aliquam culpa amet reprehenderit nostrum quo perferendis vero quod voluptatem obcaecati sit praesentium dolores facilis, laborum voluptas provident? Minima at vitae temporibus aspernatur voluptatem inventore eius. Totam, in sit?"
-    },
-    {
-        "title": "Commodi suscipit eum impedit.",
-        "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Eius, deserunt? Nihil, quam odio distinctio, totam iste ratione nobis soluta magnam ad a dolor, cumque qui explicabo ab asperiores quo alias in? Reprehenderit, facere cum voluptatum voluptas assumenda illo?"
-    },
-    {
-        "title": "Quas voluptatibus temporibus cupiditate!",
-        "year": "2023",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ullam voluptatum aperiam soluta! Doloremque eum, ratione impedit voluptatum atque, iusto voluptate odio ipsum error quaerat fugiat, totam enim inventore nisi veniam reprehenderit velit earum eligendi sed veritatis. Reprehenderit, nobis."
-    },
-    {
-        "title": "Ut expedita architecto amet?",
-        "year": "2023",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Rerum ut, sunt nostrum maiores ea porro pariatur asperiores cupiditate mollitia odit ab, temporibus aliquam nihil laudantium voluptatum nam provident voluptatibus atque incidunt et saepe! Sequi iure obcaecati eligendi fuga?"
-    },
-    {
-        "title": "Hic minima earum magnam?",
-        "year": "2023",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Vitae aperiam possimus, libero laboriosam adipisci ipsa asperiores sit ex neque animi perspiciatis, esse minus, fuga tempore quis unde voluptates voluptas odit porro. Omnis ad maiores dolores saepe necessitatibus dicta?"
-    },
-    {
-        "title": "Adipisci perspiciatis cumque maxime.",
-        "year": "2022",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quos, ipsa iste repellendus blanditiis corrupti dignissimos saepe assumenda aliquid deserunt ullam eum quaerat ipsam culpa eos eligendi excepturi illum nemo perspiciatis consequatur expedita eaque, quia vel. Laudantium, distinctio expedita!"
-    },
-    {
-        "title": "Illo veniam rem repudiandae.",
-        "year": "2021",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Cumque illo molestiae quae sequi nobis libero accusantium aut pariatur repellat corrupti ea repudiandae inventore, sapiente ut possimus vero sunt, perspiciatis, dignissimos blanditiis unde tempora perferendis numquam expedita labore. Amet."
+        "url": "https://ziyaozzz.github.io/dsc80_project4_html/",
+        "image": "../images/dsc80.png",
+        "description": "This data science project for DSC80 at UCSD investigates the correlation between a recipe's rating and the percentage of total calories in the recipe that come from sugar."
     },
     {
         "title": "Entertainment Design Portfolio",
         "year": "2021",
+        "url": "https://docs.google.com/presentation/d/1aOYY8te7mVEtG-aEhGc90klSydSXL1MpAuayYUIOeCM/edit?usp=sharing",
         "image": "../images/portfolio_cover.png",
-        "website": "https://docs.google.com/presentation/d/1aOYY8te7mVEtG-aEhGc90klSydSXL1MpAuayYUIOeCM/edit?usp=sharing",
         "description": "Digital design portfolio that consists of multiple character designs, environment designs, prop designs, and transportation designs under the same fantastical world view."
     }
 ]

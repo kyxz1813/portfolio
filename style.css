@@ -145,11 +145,13 @@ article img{
 
 }
 .projects h1, h2, h3, h4, h5, h6{
+  text-decoration: none;
   padding: 0.5em;
   line-height: 1.1;
   text-wrap: balance;
 }
 .projects h2{
+  text-decoration: none;
   margin: 0
 }
 label.color_scheme{
