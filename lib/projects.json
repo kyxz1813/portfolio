@@ -1,5 +1,12 @@
 [
     {
+        "title": "Schrodinger's Mice - Interactive Data Visualization",
+        "year": "2025",
+        "url": "https://jefferson8868.github.io/Schrodinger-s-Mice/",
+        "image": "../images/animation.GIF",
+        "description": "An interactive data visualization that explores the circadian rhythms of mice. Generate hyponthetical mouse movement within the unobserved box to represent possible trajectories."
+      },
+    {
         "title": "Mouse Circadian Rhythm Analysis",
         "year": "2025",
         "url": "https://kyxz1813.github.io/Mouse-Circadian-Rhythm-Analysis/",

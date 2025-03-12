@@ -2,6 +2,7 @@ let data = [];
 const width = 1000;
 const height = 600;
 let xScale, yScale;
+let selectedCommits = [];
 let brushSelection = null;
 
 async function loadData() {
@@ -169,13 +170,17 @@ function createScatterplot() {
             if (!commit || !commit.id) 
                 return; // Ensure commit is valid
 
-            d3.select(event.currentTarget).style('fill-opacity', 1); // Full opacity on hover
+            d3.select(event.currentTarget)
+                .classed('selected', true)
+                .style('fill-opacity', 1); // Full opacity on hover
             updateTooltipContent(commit);
             updateTooltipVisibility(true);
             updateTooltipPosition(event);
         })
-        .on('mouseleave', function () {
-            d3.select(event.currentTarget).style('fill-opacity', 0.7); // Restore transparency
+        .on('mouseleave', function (event) {
+            d3.select(event.currentTarget)
+                .classed('selected', false)
+                .style('fill-opacity', 0.7); // Restore transparency
             // updateTooltipContent({});
             updateTooltipVisibility(false);
         });
@@ -314,3 +319,30 @@ document.addEventListener('DOMContentLoaded', async () => {
     brushSelector();
   });
 
+/* lab8 */
+let timeScale = d3.scaleTime([d3.min(commits, d => d.datetime), d3.max(commits, d => d.datetime)], [0, 100]);
+let commitMaxTime = timeScale.invert(commitProgress);
+
+const timeSlider = document.getElementById('time-slider');
+const selectedTime = document.getElementById('selected-time');
+
+selectedTime.textContent = timeScale.invert(commitProgress).toLocaleString();
+
+function formatTime(minutes) {
+    const date = new Date(0, 0, 0, 0, minutes);
+    return date.toLocaleString('en-US', { timeStyle: 'short' });
+}
+  
+function updateTimeDisplay() {
+    timeFilter = Number(timeSlider.value);
+
+// if (timeFilter === -1) {
+//     selectedTime.textContent = "11:59 PM";
+// } else {
+//     selectedTime.textContent = formatTime(timeFilter);
+// }
+    selectedTime.textContent = formatTime(timeFilter);
+}
+
+timeSlider.addEventListener('input', updateTimeDisplay);
+updateTimeDisplay();
