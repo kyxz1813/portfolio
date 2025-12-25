@@ -12,9 +12,6 @@ function countProjects(projects) {
 }
 countProjects(projects)
 
-/* lab 05 */
-// let colors = ["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5","#d9d9d9","#bc80bd","#ccebc5","#ffed6f"];
-
 let query = '';
 let selectedYear = null;
 let searchInput = document.querySelector('.searchBar');
@@ -67,7 +64,7 @@ function renderPieChart(projectsGiven) {
     .enter()
     .append('path')
     .attr('d', arcGenerator)
-    .attr('fill', (d) => selectedYear ? selectedColor : colors[d.data.label]) // ✅ FIXED: Uses correct slice color
+    .attr('fill', (d) => selectedYear ? selectedColor : colors[d.data.label]) 
     .on('click', function(event, d) {
       // Toggle selection state
       if (selectedYear === d.data.label) {

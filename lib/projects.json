@@ -1,22 +1,30 @@
-[
+[   
+    {
+        "title": "Analyzing Multimorbidity Patterns & Sepsis Outcomes in Critical Care",
+        "year": "2025",
+        "url": "multimorbidity.html",
+        "pdf": "../pdf/Analyzing Multimorbidity Patterns & Sepsis Outcomes in Critical Care.pdf",
+        "image": "images/multimorbidity.png",
+        "description": "A report of replication study by applying latent class analysis to the MIMIC-III dataset, confirming the presence of distinct multimorbidity subgroups in ICU patients. These subgroups show clear differences in sepsis risk and clinical severity, highlighting their value for improving risk stratification in critical care."
+      },
     {
         "title": "Schrodinger's Mice - Interactive Data Visualization",
         "year": "2025",
         "url": "https://jefferson8868.github.io/Schrodinger-s-Mice/",
-        "image": "../images/animation.GIF",
+        "image": "images/animation.GIF",
         "description": "An interactive data visualization that explores the circadian rhythms of mice. Generate hyponthetical mouse movement within the unobserved box to represent possible trajectories."
       },
     {
         "title": "Mouse Circadian Rhythm Analysis",
         "year": "2025",
         "url": "https://kyxz1813.github.io/Mouse-Circadian-Rhythm-Analysis/",
-        "image": "../images/mouse.png",
+        "image": "images/mouse.png",
         "description": "An interactive data visualization that deploys a radial graph to explore the circadian rhythms of mice, aiming to answer two key questions: What is the relationship between temperature and activity? How does gender influence this relationship?"
       },
     {
         "title": "Bikewatching",
         "year": "2025",
-        "image": "../images/bikewatching.png",
+        "image": "images/bikewatching.png",
         "url": "https://kyxz1813.github.io/bikewatching/",
         "description": "An immersive, interactive map visualization of bike traffic in the Boston area during different times of the day."
     },
