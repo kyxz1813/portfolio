@@ -32,21 +32,21 @@
         "title": "Amazon Product Reviews Dataset Analysis",
         "year": "2024",
         "url": "https://docs.google.com/document/d/1rIhhnQYCZioL1QtNduhDfBJ-hzKJjzW6NMwtGGLronM/edit?usp=sharing",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "images/amazon.png",
         "description": "We used the Amazon Product Reviews (Amazon_Fashion category) 2023 dataset to create a machine learning model to predict product rateings, using features like, review text, helpfulness votes, item descriptions."
     },
     {
         "title": "Recipe Nutrition VS. Preparation Time & Steps",
         "year": "2024",
         "url": "https://ziyaozzz.github.io/dsc80_project4_html/",
-        "image": "../images/dsc80.png",
+        "image": "images/dsc80.png",
         "description": "This data science project for DSC80 at UCSD investigates the correlation between a recipe's rating and the percentage of total calories in the recipe that come from sugar."
     },
     {
         "title": "Entertainment Design Portfolio",
         "year": "2021",
         "url": "https://docs.google.com/presentation/d/1aOYY8te7mVEtG-aEhGc90klSydSXL1MpAuayYUIOeCM/edit?usp=sharing",
-        "image": "../images/portfolio_cover.png",
+        "image": "images/portfolio_cover.png",
         "description": "Digital design portfolio that consists of multiple character designs, environment designs, prop designs, and transportation designs under the same fantastical world view."
     }
 ]
