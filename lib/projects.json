@@ -2,7 +2,7 @@
     {
         "title": "Analyzing Multimorbidity Patterns & Sepsis Outcomes in Critical Care",
         "year": "2025",
-        "url": "multimorbidity.html",
+        "url": "projects/multimorbidity.html",
         "pdf": "../pdf/Analyzing Multimorbidity Patterns & Sepsis Outcomes in Critical Care.pdf",
         "image": "images/multimorbidity.png",
         "description": "A report of replication study by applying latent class analysis to the MIMIC-III dataset, confirming the presence of distinct multimorbidity subgroups in ICU patients. These subgroups show clear differences in sepsis risk and clinical severity, highlighting their value for improving risk stratification in critical care."

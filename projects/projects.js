@@ -1,10 +1,24 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
 import { fetchJSON, renderProjects } from '../global.js';
 
-const projects = await fetchJSON('../lib/projects.json');
-const projectsContainer = document.querySelector('.projects');
+// ⭐ NEW — load original data
+const rawProjects = await fetchJSON('../lib/projects.json');
 
+// ⭐ CHANGED — adjust both image and url for this /projects/ page
+const projects = rawProjects.map(p => ({
+  ...p,
+  image: p.image && !p.image.startsWith('http')
+    ? '../' + p.image          // from /projects → ../images/...
+    : p.image,
+  url: p.url && !p.url.startsWith('http')
+    ? '../' + p.url            // from /projects → ../projects/...
+    : p.url
+}));
+
+// ⭐ CHANGED — now use the adjusted list
+const projectsContainer = document.querySelector('.projects');
 renderProjects(projects, projectsContainer, 'h2');
+// ⭐ END OF FIX
 
 function countProjects(projects) {
     let count = `${projects.length} Projects`;
