@@ -1,4 +1,10 @@
-[   
+[    {
+        "title": "Early ICU Sepsis Prediction with SEPSIS SENTINEL MODEL",
+        "year": "2026",
+        "url": "https://kyxz1813.github.io/DSC180B-website/",
+        "image": "images/sepsis.png",
+        "description": "An ICU-hour–level early warning system developed on MIMIC-IV to predict sepsis onset 1–4 hours in advance."
+      },
     {
         "title": "Analyzing Multimorbidity Patterns & Sepsis Outcomes in Critical Care",
         "year": "2025",
